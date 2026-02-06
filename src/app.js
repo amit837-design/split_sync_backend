@@ -36,7 +36,7 @@ app.get("/ping", (req, res) => {
 
 // Global Error Handler
 app.use((err, req, res, next) => {
-  console.error("🔥 ERROR LOG:", err.message);
+  console.error("ERROR LOG:", err.message);
   console.error(err.stack);
 
   const statusCode = res.statusCode === 200 ? 500 : res.statusCode;
